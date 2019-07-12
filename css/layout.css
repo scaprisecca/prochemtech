@@ -1,0 +1,77 @@
+/* Header/Nav and Footer layout for each page*/
+
+
+/* --- Header --- */
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-logo {
+    border-radius: 5px;
+    width: 64px;
+    height: 64px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+}
+
+.social-links li {
+    font-size: 2rem;
+    padding: 0 .75rem;
+}
+
+.social-links li span {
+    color: var(--black);
+}
+
+.social-links a:visited {
+    color: var(--black);
+}
+
+.social-links a:hover {
+    font-size: 2.2rem;
+    transition: .2s ease;
+}
+
+
+/* --- Navigation --- */
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+.nav-item a {
+    color: var(--black);
+}
+
+.nav-item a:hover {
+    font-weight: 800;
+}
+
+
+
+/* --- Footer --- */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+
+.footer-nav {
+    padding: 0;
+}
