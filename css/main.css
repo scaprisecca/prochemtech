@@ -9,9 +9,18 @@
 
 /* --- DRY CODE --- */
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 60px;
+    grid-auto-rows: auto;
+    min-height: 100%;
 }
 
 a {
@@ -19,8 +28,44 @@ a {
     color: blue;
 }
 
+a:hover {
+    color: var(--light-blue);
+}
+
 h1 {
     font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+h2, h3 {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.article-wrapper {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.article-wrapper p {
+    padding: .4rem 0;
+}
+
+.article-author {
+    text-align: center;
+    font-weight: 600;
+}
+
+table {
+    border: 1px solid var(--black);
+}
+
+td {
+    border: 1px solid var(--black);
+}
+
+.center-text {
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 /* --- Header --- */
@@ -100,7 +145,7 @@ nav {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 99%;
     background-color: rgba(15, 15, 15, 0.4);
 }
 
@@ -147,6 +192,12 @@ nav {
     height: 250px;
     border-radius: 10px;
     transition: .5s ease;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: .5rem 0 1rem;
 }
 
 .card-shadow {
@@ -201,11 +252,30 @@ footer {
     height: 100px;
     background-color: var(--light-blue);
     border: 1px solid var(--light-blue);
+    margin-top: auto;
 }
 
 .footer-nav {
     padding: 0;
 }
+
+/* ----------------------- Company Info Page ---------------------------*/
+
+.company-info-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.company-info-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.company-info-text {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+}
+
 
 
 /* ----------------------- Products Page ---------------------------*/
@@ -213,12 +283,17 @@ footer {
 .products-container {
     width: 80%;
     margin: 0 auto;
+
 }
 
 .product-title {
     font-size: 2.5rem;
     font-weight: 600;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;margin-bottom: 0;
+}
+
+.products-container ul {
+    margin: 0;
 }
 
 .product-item {
@@ -229,14 +304,25 @@ footer {
 /* ----------------------- News Page ---------------------------*/
 
 .news-container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     font-size: 1.1rem;
 }
 
 .news-container h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
+}
+
+.news-container p {
+    margin: 1.4rem 0;
+    padding: 1.2rem 0;
+}
+
+.news-contact {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 
@@ -246,3 +332,90 @@ footer {
 
 
 /* ----------------------- Contact Us Page ---------------------------*/
+
+.contact-container {
+    width: 90%;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: start;
+    grid-column-gap: 1rem;
+}
+
+/* --- Form Section --- */
+
+fieldset {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+legend {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contact-form {
+    width: 100%;
+
+}
+
+.contact-form input {
+    margin: .5rem 0;
+    border-radius: 3px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: #d5d5d5cb;
+}
+
+#submit {
+    width: 25%;
+    padding: .5rem 1rem;
+    border-radius: 100px;
+    background-color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+    box-shadow: 0 20px 35px -12px var(--light-blue);
+    opacity: 40%;
+}
+
+#submit:hover {
+    opacity: .8;
+    width: 26%;
+    font-size: 1.1rem;
+}
+
+/* --- End of Form Section --- */
+
+.locations {
+    width: 90%;
+    text-align: justify;
+}
+
+.location-title {
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.contact-map iframe {
+    height: 300px;
+    width: 300px;
+}
+
+.contact-phone {
+    display: inline-block;
+    padding: 10px 0 5px;
+}
