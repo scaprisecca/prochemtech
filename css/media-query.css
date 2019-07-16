@@ -1,0 +1,30 @@
+/* --- Media Queries --- */
+
+/* Mobile Phones */
+@media only screen and (max-width: 550px) {
+        
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "logo az"
+            "logo pa";
+        justify-items: center;
+    }
+
+    .header-logo {
+        grid-area: logo;
+    }
+
+    .phone1 {
+        grid-area: az;
+    }
+
+    .phone2 {
+        grid-area: pa;
+    }
+
+    .social-links{
+        display: none;
+    }
+}
